@@ -1,0 +1,39 @@
+name: 'Zabreuit Technical SEO & Web Auditor'
+description: 'Automated CI/CD technical audit for SEO, OpenGraph, SSL, and Security Headers. $0 infra cost.'
+author: 'Jose Antonio Abreu'
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  url:
+    description: 'Target URL to audit (e.g. https://myapp.com)'
+    required: true
+  audit_preset:
+    description: 'Audit preset from catalog: seo-opengraph, seo-audit, security-audit, full-technical'
+    required: false
+    default: 'seo-opengraph'
+  license_key:
+    description: 'Optional Pro License Key or Ed25519 Signed License Token (unlocks Pro security checks)'
+    required: false
+    default: ''
+  fail_on_critical:
+    description: 'Whether to exit with code 1 if critical issues or score below threshold are detected'
+    required: false
+    default: 'false'
+  min_score:
+    description: 'Minimum acceptable health score (0-100) before triggering failure'
+    required: false
+    default: '70'
+
+outputs:
+  audit_score:
+    description: 'Final numerical audit score (0-100)'
+  findings_json:
+    description: 'Raw JSON array with detected issues and severity'
+  markdown_summary:
+    description: 'Markdown summary table injected into step summary'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
