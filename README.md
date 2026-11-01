@@ -41,3 +41,12 @@ A Markdown report in the workflow summary, plus JSON outputs for downstream step
 ## License
 
 MIT
+
+## Ready-made packs
+
+If you prefer working tools instead of building your own, there are curated CLI packs
+(10 tools each, Node.js, no dependencies):
+
+- **B2B Leads Arsenal** — https://gumroad.com/l/zabreuit-pack-03
+- **E-commerce Intelligence** — https://gumroad.com/l/zabreuit-pack-01
+- **SEO & Web Health Auditors** — https://gumroad.com/l/zabreuit-pack-09
